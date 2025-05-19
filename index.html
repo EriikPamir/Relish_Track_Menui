@@ -1,78 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Truck Menu</title>
+  <style>
+    :root {
+      --bg-color: #fff;
+      --text-color: #222;
+      --accent-color: #d32f2f;
+      --border-color: #ccc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+    }
+
+    .category {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+      li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section>
-        <h1>Relish</h1>
-        <h2>Track Menu</h2>
-        <div class="FullMenu">
-            <div class="menu">
-                <ul>
-                    <li>HOT DOG</li>
-                    <li>CHEESE DOG</li>
-                    <li>CHILI CHEESE DOG</li>
-                    <li>RIDLEY RIPPER</li>
-                    <li>TEXAS TOMMY</li>
-                    <li>HAMBURGER</li>
-                    <li>CHEESEBURGER </li>
-                    <li>HOT SAUSAGE (served on italian roll)</p></li>
-                    <li>ITALIAN  SAUSAGE (with peppers & onions on Italian roll)</li>
-                    <li>KIELBASA  (with sauerkraut on Italian roll)</li>
-                    <li>SMASH ONION CHEESEBURGER</li>
-                    <li>DOUBLE CHEESEBURGER</li>
-                    <li>BACON CHEESEBURGER</li>
-                    <li>CHILI CHEESEBURGER</li>
-                    <li>CHICKEN FINGERS</li>
-                    <li>FRENCH FRIES</li>
-                    <li>CHEESE FRIES</li>
-                    <li>CHILI CHEESE FRIES</li>
-                    <li>FUNNEL CAKE FRIES</li>
-                    <li>HOMEMADE LEMONADE</li>
-                    <li>CAN SODA OR WATER BOTTLES(Coke, Sprite, Diet Coke)</li>
-                </ul>
-            </div>
-            <div class="price">
-                <ul>
-                    <li>$5.00</li> 
-                    <li>$6.00</li>
-                    <li>$6.00</li>
-                    <li>$5.00</li>
-                    <li>$6.00</li>
-                    <li>$5.00</li>
-                    <li>$6.00</li>
-                    <li>$7.00</li>
-                    <li>$8.00</li>
-                    <li>$8.00</li>
-                    <li>$6.00</li>
-                    <li>$8.00</li>
-                    <li>$7.00</li>
-                    <li>$7.00</li>
-                    <li>$8.00</li>
-                    <li>$5.00</li>
-                    <li>$6.00</li>
-                    <li>$7.00</li>
-                    <li>$7.00</li>
-                    <li>$5.00</li>
-                    <li>$2.00</li>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="toppin">
-            <ul>
-                <li>Sauerkraut</li>
-                <li>Chili</li>
-                <li>Cheese Whiz</li>
-                <li>Onion</li>
-                <li>Homemade Relish</li>
-            </ul>
-        </div>
-    </section> 
+  <div class="container">
+    <h1>Food Truck Menu</h1>
+
+    <div class="category">Hot Dogs & Burgers</div>
+    <ul>
+      <li><span>Hot Dog</span><span>$5.00</span></li>
+      <li><span>Cheese Dog</span><span>$6.00</span></li>
+      <li><span>Chili Cheese Dog</span><span>$6.00</span></li>
+      <li><span>Ridley Ripper</span><span>$5.00</span></li>
+      <li><span>Texas Tommy</span><span>$6.00</span></li>
+      <li><span>Hamburger</span><span>$5.00</span></li>
+      <li><span>Cheeseburger</span><span>$6.00</span></li>
+      <li><span>Smash Onion Cheeseburger</span><span>$6.00</span></li>
+      <li><span>Double Cheeseburger</span><span>$8.00</span></li>
+      <li><span>Bacon Cheeseburger</span><span>$7.00</span></li>
+      <li><span>Chili Cheeseburger</span><span>$7.00</span></li>
+    </ul>
+
+    <div class="category">Sausage & Special</div>
+    <ul>
+      <li><span>Hot Sausage (Italian Roll)</span><span>$7.00</span></li>
+      <li><span>Italian Sausage w/ Peppers & Onions</span><span>$8.00</span></li>
+      <li><span>Kielbasa w/ Sauerkraut</span><span>$8.00</span></li>
+    </ul>
+
+    <div class="category">Sides & Fries</div>
+    <ul>
+      <li><span>Chicken Fingers</span><span>$8.00</span></li>
+      <li><span>French Fries</span><span>$5.00</span></li>
+      <li><span>Cheese Fries</span><span>$6.00</span></li>
+      <li><span>Chili Cheese Fries</span><span>$7.00</span></li>
+      <li><span>Funnel Cake Fries</span><span>$7.00</span></li>
+    </ul>
+
+    <div class="category">Drinks</div>
+    <ul>
+      <li><span>Homemade Lemonade (20oz)</span><span>$5.00</span></li>
+      <li><span>Can Soda or Water</span><span>$2.00</span></li>
+    </ul>
+
+    <div class="category">Toppings</div>
+    <ul>
+      <li>Sauerkraut, Chili, Cheese Whiz, Onion, Homemade Relish</li>
+    </ul>
+  </div>
 </body>
 </html>
